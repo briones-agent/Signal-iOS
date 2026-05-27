@@ -152,6 +152,7 @@
 		17EC850C29133CDB00319C82 /* CancelledGroupRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EC850B29133CDB00319C82 /* CancelledGroupRing.swift */; };
 		259D4DF2486F14DB112B3999 /* Pods_SignalServiceKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DA2BE463493965F5BC71C0 /* Pods_SignalServiceKitTests.framework */; };
 		2B5914CF7BCE3017430CFD84 /* Pods_SignalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BADD293DAFC82BF3274F0F6 /* Pods_SignalTests.framework */; };
+		308FEFE30DD7E7FEA6D92094 /* ExpoIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE457C94E7071374419B996 /* ExpoIntegration.swift */; };
 		3236FCC42592B67B006D33B9 /* NameCollisionReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236FCC32592B67B006D33B9 /* NameCollisionReviewCell.swift */; };
 		326DF2612739F4D90017B789 /* FeaturedBadgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326DF2602739F4D90017B789 /* FeaturedBadgeViewController.swift */; };
 		327CF66825ACE7DD00DA0A6F /* GetStartedBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327CF66725ACE7DC00DA0A6F /* GetStartedBannerViewController.swift */; };
@@ -1816,6 +1817,7 @@
 		B9F817642BA263A900EAEE23 /* SignalSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F817632BA263A900EAEE23 /* SignalSymbols.swift */; };
 		B9F9ABF72CB98844001AE92D /* UIColor+Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F9ABF62CB98844001AE92D /* UIColor+Signal.swift */; };
 		B9FF37362B9286C6005ADDB8 /* UsernameLinkScanQRCodeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FF37352B9286C6005ADDB8 /* UsernameLinkScanQRCodeSheet.swift */; };
+		BB597958A636B096CE2BCF7E /* SignalExpoArtifacts-release in Frameworks */ = {isa = PBXBuildFile; productRef = 7E77764087F4BAA5A611C80E /* SignalExpoArtifacts-release */; };
 		C100E6822C33087C000C83B8 /* PaymentsFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100E6812C33087C000C83B8 /* PaymentsFormat.swift */; };
 		C10E9FAF2BB778E100A609B9 /* BackupArchiveManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E9FAE2BB778E100A609B9 /* BackupArchiveManagerMock.swift */; };
 		C113994B2CA1B32C00D4D90C /* BackupStickerPackDownloadStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113994A2CA1B32400D4D90C /* BackupStickerPackDownloadStore.swift */; };
@@ -8341,6 +8343,7 @@
 		F9FA363529F335E500C13830 /* ProvisioningCipherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvisioningCipherTests.swift; sourceTree = "<group>"; };
 		F9FAABD729DB55940004B383 /* Progress+Signal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Progress+Signal.swift"; sourceTree = "<group>"; };
 		FA0F334C71C5504ED07AC74C /* Pods-SignalUI.profiling.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignalUI.profiling.xcconfig"; path = "Target Support Files/Pods-SignalUI/Pods-SignalUI.profiling.xcconfig"; sourceTree = "<group>"; };
+		FAE457C94E7071374419B996 /* ExpoIntegration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExpoIntegration.swift; sourceTree = "<group>"; };
 		FC3BD9871A30A790005B96BB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FCB11D8B1A129A76002F93FB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		FEFD8A174F57F4C221747D51 /* Pods-SignalServiceKitTests.app store release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignalServiceKitTests.app store release.xcconfig"; path = "Target Support Files/Pods-SignalServiceKitTests/Pods-SignalServiceKitTests.app store release.xcconfig"; sourceTree = "<group>"; };
@@ -8412,6 +8415,7 @@
 				4CC1ECF9211A47CE00CC13BE /* StoreKit.framework in Frameworks */,
 				D2179CFE16BB0B480006F3AB /* SystemConfiguration.framework in Frameworks */,
 				D221A08E169C9E5E00537ABF /* UIKit.framework in Frameworks */,
+				BB597958A636B096CE2BCF7E /* SignalExpoArtifacts-release in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -9718,6 +9722,7 @@
 				880D902F2481E617003D2B14 /* SignalApp.swift */,
 				6698FC13297F38BB004EFC30 /* ViewControllerContext.swift */,
 				76616C9C2A266A05005F7001 /* WindowManager.swift */,
+				FAE457C94E7071374419B996 /* ExpoIntegration.swift */,
 			);
 			path = AppLaunch;
 			sourceTree = "<group>";
@@ -15797,6 +15802,9 @@
 				F9C5C8A9289451B900548EEE /* PBXTargetDependency */,
 			);
 			name = Signal;
+			packageProductDependencies = (
+				7E77764087F4BAA5A611C80E /* SignalExpoArtifacts-release */,
+			);
 			productName = RedPhone;
 			productReference = D221A089169C9E5E00537ABF /* Signal.app */;
 			productType = "com.apple.product-type.application";
@@ -16009,6 +16017,9 @@
 				zh_TW,
 			);
 			mainGroup = D221A07E169C9E5E00537ABF;
+			packageReferences = (
+				5E147CDAA2E9623099518959 /* XCLocalSwiftPackageReference "SignalExpoArtifacts-release" */,
+			);
 			productRefGroup = D221A08A169C9E5E00537ABF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -18814,6 +18825,7 @@
 				45069FC629D3A7C800D0DD14 /* WideMediaTileViewLayout.swift in Sources */,
 				45906C6B29D238560025906D /* WidePhotoCell.swift in Sources */,
 				76616C9D2A266A05005F7001 /* WindowManager.swift in Sources */,
+				308FEFE30DD7E7FEA6D92094 /* ExpoIntegration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -22754,6 +22766,21 @@
 			defaultConfigurationName = "App Store Release";
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		5E147CDAA2E9623099518959 /* XCLocalSwiftPackageReference "SignalExpoArtifacts-release" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "Signal/expo-app/artifacts/SignalExpoArtifacts-release";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7E77764087F4BAA5A611C80E /* SignalExpoArtifacts-release */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5E147CDAA2E9623099518959 /* XCLocalSwiftPackageReference "SignalExpoArtifacts-release" */;
+			productName = "SignalExpoArtifacts-release";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D221A080169C9E5E00537ABF /* Project object */;
 }

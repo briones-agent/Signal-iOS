@@ -158,6 +158,13 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         BenchEventStart(title: "Presenting HomeView", eventId: "AppStart", logInProduction: true)
         appReadiness.runNowOrWhenUIDidBecomeReadySync { BenchEventComplete(eventId: "AppStart") }
 
+        // Bootstraps the embedded Expo/React Native runtime and registers
+        // the Safety Center screen so it can be presented from anywhere
+        // in the app. The RN screen dismisses itself via the brownfield
+        // Navigation API (`popToNative()` from JavaScript).
+        ExpoIntegration.bootstrap()
+        ExpoIntegration.scheduleAutoPresentIfRequested()
+
         MessageFetchBGRefreshTask.register(appReadiness: appReadiness)
 
         let deviceSleepManager = DeviceSleepManagerImpl()
