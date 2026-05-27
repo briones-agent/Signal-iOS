@@ -13,17 +13,17 @@
 //
 
 #if os(iOS)
-    import Foundation
-    import UIKit
-    import SignalExpo
+    public import Foundation
+    public import UIKit
+    internal import SignalExpo
 
-    @objc final class ExpoIntegration: NSObject {
+    @objc public final class ExpoIntegration: NSObject {
         /// Call from AppDelegate.didFinishLaunchingWithOptions. Initializes
         /// the React Native host, seeds shared state, subscribes to
         /// messages from RN, and wires the brownfield `popToNative`
         /// notification so the RN screen can dismiss the host modal from
         /// JavaScript.
-        @objc static func bootstrap() {
+        @objc public static func bootstrap() {
             ReactNativeHostManager.shared.initialize()
             seedSharedState()
             registerMessageHandlers()
@@ -61,7 +61,7 @@
         /// Returns a view controller hosting the Safety Center RN screen.
         /// The RN side owns its own "Done" affordance via `popToNative()`
         /// from the brownfield Navigation API.
-        @objc static func makeSafetyCenterViewController() -> UIViewController {
+        @objc public static func makeSafetyCenterViewController() -> UIViewController {
             let rn = ReactNativeViewController(moduleName: "main")
             rn.modalPresentationStyle = .fullScreen
             return rn
@@ -72,7 +72,7 @@
         /// `-SignalExpoAutoDemo YES`, fire a self-driving sequence so the
         /// recording demonstrates the Navigation API (popToNative) without
         /// requiring external UI automation.
-        @objc static func scheduleAutoPresentIfRequested() {
+        @objc public static func scheduleAutoPresentIfRequested() {
             guard UserDefaults.standard.bool(forKey: "SignalExpoAutoPresent") else { return }
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 presentOnKeyWindow()
