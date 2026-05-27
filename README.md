@@ -1,3 +1,20 @@
+# Signal iOS + React Native
+
+This is an experimental fork of the official [Signal iOS](https://github.com/signalapp/Signal-iOS) with the sole purpose of testing brownfield support for Expo and React Native in large native-first codebases. Its commits serve as a reference for anyone interested in integrating React Native into an existing iOS app, especially those that don't want to refactor the whole project structure to accommodate React Native.
+
+This project uses Expo's brownfield isolated approach, plus the [expo-brownfield Navigation API](https://docs.expo.dev/brownfield/overview/) — the RN screen dismisses itself by calling `popToNative()` from JavaScript instead of relying on a native Done button.
+
+## Integration steps
+
+Check commits for detailed steps, full instructions can be found in the [expo-brownfield documentation](https://docs.expo.dev/brownfield/overview/).
+
+1. **Create the Expo app**: Run `npx create-expo-app expo-app --template default@canary-sdk-56` to set up a new Expo app.
+2. **Install expo-brownfield**: Add expo-brownfield to your project `npx expo install expo-brownfield` and generate a Swift Package.
+3. **Add React Native view**: Integrate the Expo app Swift Package into the existing iOS app.
+
+<details>
+<summary>Signal iOS</summary>
+
 # Signal iOS
 
 Signal is a free and open source messaging app for simple private communication with friends.
@@ -38,3 +55,5 @@ Copyright 2013-2025 Signal Messenger, LLC
 Licensed under the GNU AGPLv3: https://www.gnu.org/licenses/agpl-3.0.html
 
 _Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc., registered in the U.S. and other countries._
+
+</details>
