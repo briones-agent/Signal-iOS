@@ -145,6 +145,7 @@
                     "color": "#F2994A",
                     "unread": 6,
                     "pinned": true,
+                    "avatarUrl": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=200&q=70&auto=format&fit=crop",
                 ],
                 [
                     "id": 3,
@@ -154,6 +155,7 @@
                     "color": "#9B51E0",
                     "unread": 12,
                     "pinned": false,
+                    "avatarUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=200&q=70&auto=format&fit=crop",
                 ],
                 [
                     "id": 4,

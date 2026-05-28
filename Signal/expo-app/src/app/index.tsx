@@ -4,6 +4,7 @@ import {
   sendMessage,
   addMessageListener,
 } from 'expo-brownfield';
+import { Image } from 'expo-image';
 import { useEffect, useState } from 'react';
 import {
   Pressable,
@@ -26,6 +27,7 @@ interface Chat {
   color: string;
   unread: number;
   pinned: boolean;
+  avatarUrl?: string;
 }
 
 const SIGNAL_BLUE = '#3A76F0';
@@ -142,11 +144,20 @@ export default function SignalSafetyCenter() {
                   pressed && { opacity: 0.6 },
                 ]}
               >
-                <View
-                  style={[styles.avatar, { backgroundColor: c.color }]}
-                >
-                  <ThemedText style={styles.avatarText}>{c.initials}</ThemedText>
-                </View>
+                {c.avatarUrl ? (
+                  <Image
+                    source={{ uri: c.avatarUrl }}
+                    style={styles.avatar}
+                    contentFit="cover"
+                    transition={200}
+                  />
+                ) : (
+                  <View
+                    style={[styles.avatar, { backgroundColor: c.color }]}
+                  >
+                    <ThemedText style={styles.avatarText}>{c.initials}</ThemedText>
+                  </View>
+                )}
                 <View style={{ flex: 1 }}>
                   <View style={styles.rowHead}>
                     <ThemedText

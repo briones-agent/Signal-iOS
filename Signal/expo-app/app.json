@@ -41,7 +41,11 @@
         {
           "ios": {
             "targetName": "SignalExpo",
-            "bundleIdentifier": "org.signal.SignalExpo"
+            "bundleIdentifier": "org.signal.SignalExpo",
+            "hostProvidedFrameworks": [
+              "SDWebImage",
+              "SDWebImageWebPCoder"
+            ]
           }
         }
       ],

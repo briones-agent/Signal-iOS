@@ -43,3 +43,6 @@ fastlane/Preview.html
 
 # expo-brownfield wiring helper — internal automation, not for users
 /integrate_expo.rb
+
+# brownfield SPM-deps cache (populated by EXPO_PRECOMPILED_MODULES_PATH)
+Signal/expo-app/.spm-deps/
